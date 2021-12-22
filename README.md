@@ -5,7 +5,7 @@ This application will allow you to view the COVID status of your travel destinat
 
 # Built with:
  * HTML
- * css
+ * CSS
  * Java Script
 
  # Contributors
