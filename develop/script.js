@@ -34,9 +34,25 @@ searchButton.addEventListener("click", function(){
 getData(inputState.value)
 })
 
+
+
 function getFlightInfo (destination){
     fetch ("https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/data/en-GB/airlines.json?apiKey=db93a64ddcmsh312cf56a679121dp127a3ejsne11329932c20")
     .then(response => {
         return response.json()
     })
 }
+
+fetch("https://hotels-com-free.p.rapidapi.com/suggest/v1.7/json?query=San%20Francisco&locale=en_US", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "hotels-com-free.p.rapidapi.com",
+		"x-rapidapi-key": "94c895e35bmsha5d3d63d53d272ap14d10cjsn4a1ba9717cc5"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
