@@ -1,7 +1,7 @@
 var inputState = document.querySelector("#stateCode")
 var inputDestination = document.querySelector("#destination")
 var searchButton = document.querySelector("#searchButton")
-// Server Side API Response W
+// Server Side API Response Website
 
 
 function getData (state){
