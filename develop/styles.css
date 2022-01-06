@@ -28,13 +28,31 @@ header li a {
     text-decoration: none;
 }
 
-
+.worldStats{
+    border: dotted red 3px;
+    padding: 10px;
+    text-align: center;
+}
 
 body {
     font-family: ‘Gill Sans’, ‘Gill Sans MT’, ‘Trebuchet MS’, sans-serif;
 }
 
+#usaVworld {
+    border: solid 3px black;
+    padding: 10px;
+}
+
+.usa{
+    border: solid 3px yellow;
+}
+
+#world{
+    border: green solid 3px;
+}
+
 .about-us{
+    justify-content: baseline;
     text-align: center;
 }
 
@@ -45,3 +63,20 @@ body {
     display: inline;
     padding: 50px;
 }
+
+section{
+    display: inline;
+    border: solid 3px gray;
+    padding: 10px;
+}
+
+.state1{
+    border: solid 3px red;
+    padding: 10px;
+}
+
+.state2{
+    border: solid 3px blue;
+    padding: 10px;
+}
+
