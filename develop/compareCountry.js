@@ -29,16 +29,12 @@ function getUSAInfo(usa){
         console.error(err);
     });
 }
-
-searchCountryButton.addEventListener("click", function(){
 getUSAInfo()
-})
-
 
 var inputCountry = document.querySelector("#countryCode")
-var searchCountryButton = document.querySelector("#searchCounrtyButton")
+var searchCountryButton = document.querySelector("#searchCountryButton")
 function getCountryInfo(country){
-    fetch ("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/northamerica", {
+    fetch ("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/covid-ovid-data/reports/" + country, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com",
@@ -50,7 +46,24 @@ function getCountryInfo(country){
         })
         .then(response => {
             console.log(response);
-	})
-};
+            var countryPerMill = response[0].Deaths_1M_pop
+            var countryTotalDeath = response[0].TotalDeaths
+            var countryTotalCases = response[0].TotalCases
+            var countryActiveCases = response[0].ActiveCases
+            var countryTotalRecovered = response[0].TotalRecovered
 
-getCountryInfo ()
+            document.querySelector("#countryPerMillion").textContent = countryPerMill
+            document.querySelector("#countryTotalDeath").textContent = countryTotalDeath
+            document.querySelector("#countryTotalCases").textContent = countryTotalCases
+            document.querySelector("#countryActiveCases").textContent = countryActiveCases
+            document.querySelector("#countryTotalRecovered").textContent = countryTotalRecovered    
+	})
+    .catch(err => {
+        console.error(err);
+    });
+}
+
+searchCountryButton.addEventListener("click", function(){
+    getCountryInfo(inputCountry.value)
+    })
+
