@@ -16,3 +16,15 @@ header nav ul li{
 body {
     font-family: ‘Gill Sans’, ‘Gill Sans MT’, ‘Trebuchet MS’, sans-serif;
 }
+
+.about-us{
+    text-align: center;
+}
+
+.about-us h3{
+    text-decoration: underline black;}
+
+.about-us ul li{
+    display: inline;
+    padding: 50px;
+}
