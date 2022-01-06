@@ -1,0 +1,18 @@
+header {
+    padding: 35px 35px;
+}
+header h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    display: inline;
+}
+
+
+header nav ul li{
+    display: inline;
+}
+
+body {
+    font-family: ‘Gill Sans’, ‘Gill Sans MT’, ‘Trebuchet MS’, sans-serif;
+}

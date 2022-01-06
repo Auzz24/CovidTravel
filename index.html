@@ -4,18 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>COVID Compare</title>
+  <link rel="stylesheet" href="develop/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
   <body>
+<!--Nav Bar starts here-->
     <header>
-        <h1>
-          <a>COVID Compare</a>
-        </h1>
-      <header>The place to settle covid debates</header>
-      <H3>Compare your state vs other states or comapre the USA to other countries</H3>
-    <br>
-    <div class="topnav">
-    </div>
+      <h1>
+          <a href=“#”>Covid Compare</a>
+      </h1>
+      <nav>
+          <!--nav list-->
+          <ul>
+              <li>
+                  <a href=“#usaVworld”>USA V. World</a>
+              </li>
+              <li>
+                  <a href=“#stateVstate”>State V. State</a>
+              </li>
+              <li>
+                  <a href=“#about-us”>About Us</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
    <!--Dropdown state code and Search Button code starts here-->
    <!--world covid stats-->
   <div>
@@ -28,7 +41,7 @@
 
 <!--Usa Vs the World Section-->
 <!--Usa Stats-->
-<div id="usaVworld">
+<div id ="usaVworld" class="usaVworld">
   <div id="usa">
   <h2>USA</h2>
   <h3>Death per million people: <span id="usaPerMillion"> </span></h3>
@@ -307,7 +320,7 @@
 
 </div>
  <!--State vs State-->
- <div id="stateState">
+ <div id="stateState" class="stateVstate">
   <div>
       <select>
         <option id="stateCode" value="AK">AK</option>
@@ -449,6 +462,16 @@
   <h3>ICU Bed's in Use: <span id="icuTotal2"> </span></h3>
 </div>
 </div>
+</div>
+<div class="about-us">
+  <h3> The Team: </h3>
+  <ul>
+    <li> Austin Miller </li>
+    <li> Jonathan Martinez </li>
+    <li> Kris Lopez </li>
+    <li> Dylan Mastin </li>
+  </ul>
+
 </div>
       <script src="./develop/script.js"></script>
   </body>
