@@ -1,7 +1,8 @@
+
+// Server Side API Response Website
 var inputState = document.querySelector("#stateCode")
 var searchButton = document.querySelector("#searchButton")
-// Server Side API Response Website
-
+var searchButton2 = document.querySelector("#searchButton2")
 
 function getData (state){
     fetch("https://api.covidactnow.org/v2/state/" + state + ".json?apiKey=09122ea58b9c408b9852a1b31c49f05a")
@@ -32,25 +33,26 @@ searchButton.addEventListener("click", function(){
 getData(inputState.value)
 })
 
-function getData2 (state){
-    fetch("https://api.covidactnow.org/v2/state/" + state + ".json?apiKey=09122ea58b9c408b9852a1b31c49f05a")
+function getData2 (state2){
+
+    fetch("https://api.covidactnow.org/v2/state/" + state2 + ".json?apiKey=09122ea58b9c408b9852a1b31c49f05a")
 
     .then(response => {
         return response.json()
     })
     .then(response => {
         console.log(response);
-        var totalCases = response.actuals.cases 
-        var totalDeaths = response.actuals.deaths
-        var positiveTests = response.actuals.positiveTests
-        var icuBedCapacity = response.actuals.icuBeds.capacity
-        var icuTotal = response.actuals.icuBeds.currentUsageTotal
+        var totalCases2 = response.actuals.cases 
+        var totalDeaths2 = response.actuals.deaths
+        var positiveTests2 = response.actuals.positiveTests
+        var icuBedCapacity2 = response.actuals.icuBeds.capacity
+        var icuTotal2 = response.actuals.icuBeds.currentUsageTotal
 
-        document.querySelector("#totalDeaths2").textContent = totalDeaths
-        document.querySelector("#totalCases2").textContent = totalCases
-        document.querySelector("#positiveTests2").textContent = positiveTests
-        document.querySelector("#icuCapacity2").textContent = icuBedCapacity
-        document.querySelector("#icuTotal2").textContent = icuTotal
+        document.querySelector("#totalDeaths2").textContent = totalDeaths2
+        document.querySelector("#totalCases2").textContent = totalCases2
+        document.querySelector("#positiveTests2").textContent = positiveTests2
+        document.querySelector("#icuCapacity2").textContent = icuBedCapacity2
+        document.querySelector("#icuTotal2").textContent = icuTotal2
     })
     .catch(err => {
         console.error(err);
