@@ -1,6 +1,7 @@
 
 // Server Side API Response Website
 var inputState = document.querySelector("#stateCode")
+var inputState2 = document.querySelector("#stateCode2")
 var searchButton = document.querySelector("#searchButton")
 var searchButton2 = document.querySelector("#searchButton2")
 
@@ -33,9 +34,9 @@ searchButton.addEventListener("click", function(){
 getData(inputState.value)
 })
 
-function getData2 (state2){
+function getData2 (state){
 
-    fetch("https://api.covidactnow.org/v2/state/" + state2 + ".json?apiKey=09122ea58b9c408b9852a1b31c49f05a")
+    fetch("https://api.covidactnow.org/v2/state/" + state + ".json?apiKey=09122ea58b9c408b9852a1b31c49f05a")
 
     .then(response => {
         return response.json()
@@ -60,5 +61,5 @@ function getData2 (state2){
 }
 
 searchButton2.addEventListener("click", function(){
-getData2(inputState.value)
+getData2(inputState2.value)
 })
