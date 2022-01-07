@@ -34,7 +34,7 @@ getUSAInfo()
 var inputCountry = document.querySelector("#countryCode")
 var searchCountryButton = document.querySelector("#searchCountryButton")
 function getCountryInfo(country){
-    fetch ("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/covid-ovid-data/reports/" + country, {
+    fetch ("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/" + country, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com",
