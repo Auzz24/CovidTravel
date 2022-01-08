@@ -65,7 +65,7 @@ function getData2 (state){
         document.querySelector("#icuCapacity2").textContent = icuBedCapacity2
         document.querySelector("#icuTotal2").textContent = icuTotal2
 
-        var myData = {
+        var myData2 = {
             totalCases2: totalCases2,
             totalDeaths2: totalDeaths2,
             positiveTests2: positiveTests2,
@@ -73,7 +73,7 @@ function getData2 (state){
             icuTotal2: icuTotal2
        }
        
-       localStorage.setItem("mySavedData", JSON.stringify(myData))
+       localStorage.setItem("mySavedData2", JSON.stringify(myData2))
     })
     .catch(err => {
         console.error(err);
