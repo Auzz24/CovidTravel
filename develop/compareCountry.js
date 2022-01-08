@@ -57,6 +57,16 @@ function getCountryInfo(country) {
             document.querySelector("#countryTotalCases").textContent = countryTotalCases
             document.querySelector("#countryActiveCases").textContent = countryActiveCases
             document.querySelector("#countryTotalRecovered").textContent = countryTotalRecovered
+
+            var myData3 = {
+                countryPerMill: countryPerMill,
+                countryTotalDeath: countryTotalDeath,
+                countryTotalCases: countryTotalCases,
+                countryActiveCases: countryActiveCases,
+                countryTotalRecovered:  countryTotalRecovered
+           }
+           
+           localStorage.setItem("mySavedData3", JSON.stringify(myData3))
         })
         .catch(err => {
             console.error(err);
