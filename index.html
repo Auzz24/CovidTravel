@@ -8,376 +8,146 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
-  <body>
-<!--Nav Bar starts here-->
-<header>
+<body>
+  <!--Nav Bar starts here-->
+  <header>
     <nav>
-        <h1> Covid Compare </h1>
-          <!--nav list-->
-          <ul>
-              <li>
-                  <a href=“#usaVworld”>USA V. World</a>
-              </li>
-              <li>
-                  <a href=“#stateVstate”>State V. State</a>
-              </li>
-              <li>
-                  <a href=“#about-us”>About Us</a>
-              </li>
-          </ul>
+      <h1> Covid Compare </h1>
+      <!--nav list-->
+      <ul>
+        <li>
+          <a href=“.usaVworld”>USA V. World</a>
+        </li>
+        <li>
+          <a href=“.stateVstate”>State V. State</a>
+        </li>
+        <li>
+          <a href=“.about-us”>About Us</a>
+        </li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-  
-   <!--world covid stats-->
+
+  <!--world covid stats-->
   <div class="worldStats">
     <h2>WORLD COVID STATS</h3>
-    <h3>Total Cases: <span id="worldTotalCases"> </span></h3>
-    <h3>Active Cases: <span id="worldActiveCases"> </span></h3>
-    <h3>Total Deaths: <span id="worldTotalDeaths"> </span></h3>
-    <h3>Total Recovered: <span id="worldRecovered"> </span></h3>
+      <h3>Total Cases: <span id="worldTotalCases"> </span></h3>
+      <h3>Active Cases: <span id="worldActiveCases"> </span></h3>
+      <h3>Total Deaths: <span id="worldTotalDeaths"> </span></h3>
+      <h3>Total Recovered: <span id="worldRecovered"> </span></h3>
   </div>
 
-<!--Usa Vs the World Section-->
+  <!--Usa Vs the World Section-->
 
-<!--Usa Stats-->
-<div id ="usaVworld">
-  <div class="usa">
-  <h2>USA</h2>
-  <h3>Death per million people: <span id="usaPerMillion"> </span></h3>
-  <h3>Total Death: <span id="usaTotalDeath"> </span></h3>
-  <h3>Total Cases: <span id="usaTotalCases"> </span></h3>
-  <h3>Active Cases: <span id="usaActiveCases"> </span></h3>
-  <h3>Total Recovered: <span id="usaTotalRecovered"> </span></h3>
-  </div>
-  
-<!--Dropdown country code and Search Button code starts here-->
-<div id="world">
+  <!--Usa Stats-->
+  <div id="usaVworld">
+    <div class="usa">
+      <h2>USA</h2>
+      <h3>Death per million people: <span id="usaPerMillion"> </span></h3>
+      <h3>Total Death: <span id="usaTotalDeath"> </span></h3>
+      <h3>Total Cases: <span id="usaTotalCases"> </span></h3>
+      <h3>Active Cases: <span id="usaActiveCases"> </span></h3>
+      <h3>Total Recovered: <span id="usaTotalRecovered"> </span></h3>
+    </div>
+
+    <!--Dropdown country code and Search Button code starts here-->
+    <div id="world">
       <select class="country" name="country" id="countryCode">
         <option>select country</option>
-        <option value="Afghanistan/agf">Afghanistan</option>
-        <!-- <option id="countryCode" value="ALA">Aland Islands</option>
-        <option id="countryCode" value="ALB">Albania</option>
-        <option id="countryCode" value="DZA">Algeria</option>
-        <option id="countryCode" value="ASM">American Samoa</option>
-        <option id="countryCode" value="AND">Andorra</option>
-        <option id="countryCode" value="AGO">Angola</option>
-        <option id="countryCode" value="AIA">Anguilla</option> -->
-        <option value="Antarctica/ata">Antarctica</option>
-        <!-- <option id="countryCode" value="ATG/AntiguaA">Antigua and Barbuda</option> -->
         <option value="Argentina/arg">Argentina</option>
-        <!-- <option id="countryCode" value="ARM">Armenia</option>
-        <option id="countryCode" value="ABW">Aruba</option> -->
         <option value="Australia/aus">Australia</option>
-        <option value="Austria/aut">Austria</option>
         <option value="Canada/can">Canada</option>
-        <!-- <option id="countryCode" value="AZE">Azerbaijan</option>
-        <option id="countryCode" value="BHS">Bahamas</option>
-        <option id="countryCode" value="BHR">Bahrain</option>
-        <option id="countryCode" value="BGD">Bangladesh</option>
-        <option id="countryCode" value="BRB">Barbados</option>
-        <option id="countryCode" value="BLR">Belarus</option>
-        <option id="countryCode" value="BEL">Belgium</option>
-        <option id="countryCode" value="BLZ">Belize</option>
-        <option id="countryCode" value="BEN">Benin</option>
-        <option id="countryCode" value="BMU">Bermuda</option>
-        <option id="countryCode" value="BTN">Bhutan</option>
-        <option id="countryCode" value="BOL">Bolivia</option>
-        <option id="countryCode" value="BES">Bonaire, Sint Eustatius and Saba</option>
-        <option id="countryCode" value="BIH">Bosnia and Herzegovina</option>
-        <option id="countryCode" value="BWA">Botswana</option>
-        <option id="countryCode" value="BVT">Bouvet Island</option> -->
-        <!-- <option value="Brazil/BRA">Brazil</option> -->
-        <!-- <option id="countryCode" value="IOT">British Indian Ocean Territory</option>
-        <option id="countryCode" value="BRN">Brunei Darussalam</option>
-        <option id="countryCode" value="BGR">Bulgaria</option>
-        <option id="countryCode" value="BFA">Burkina Faso</option>
-        <option id="countryCode" value="BDI">Burundi</option>
-        <option id="countryCode" value="KHM">Cambodia</option>
-        <option id="countryCode" value="CMR">Cameroon</option> -->
-       
-        <!-- <option id="countryCode" value="CPV">Cape Verde</option>
-        <option id="countryCode" value="CYM">Cayman Islands</option>
-        <option id="countryCode" value="CAF">Central African Republic</option>
-        <option id="countryCode" value="TCD">Chad</option> -->
-        <!-- <option id="countryCode" value="CHL/Chile">Chile</option> -->
-        <!-- <option value="China/CHN">China</option> -->
-        <!-- <option id="countryCode" value="CXR">Christmas Island</option>
-        <option id="countryCode" value="CCK">Cocos (Keeling) Islands</option>
-        <option id="countryCode" value="COL">Colombia</option>
-        <option id="countryCode" value="COM">Comoros</option>
-        <option id="countryCode" value="COG">Congo</option>
-        <option id="countryCode" value="COD">Congo, Democratic Republic of the Congo</option>
-        <option id="countryCode" value="COK">Cook Islands</option>
-        <option id="countryCode" value="CRI">Costa Rica</option>
-        <option id="countryCode" value="CIV">Cote D'Ivoire</option>
-        <option id="countryCode" value="HRV">Croatia</option>
-        <option id="countryCode" value="CUB">Cuba</option>
-        <option id="countryCode" value="CUW">Curacao</option>
-        <option id="countryCode" value="CYP">Cyprus</option> -->
-        <!-- <option id="countryCode" value="CZE">Czech Republic</option> -->
-        <!-- <option id="countryCode" value="Denmark/DNK">Denmark</option> -->
-        <!-- <option id="countryCode" value="DJI">Djibouti</option>
-        <option id="countryCode" value="DMA">Dominica</option>
-        <option id="countryCode" value="DOM">Dominican Republic</option>
-        <option id="countryCode" value="ECU">Ecuador</option>
-        <option id="countryCode" value="EGY">Egypt</option>
-        <option id="countryCode" value="SLV">El Salvador</option>
-        <option id="countryCode" value="GNQ">Equatorial Guinea</option>
-        <option id="countryCode" value="ERI">Eritrea</option>
-        <option id="countryCode" value="EST">Estonia</option>
-        <option id="countryCode" value="ETH">Ethiopia</option>
-        <option id="countryCode" value="FLK">Falkland Islands (Malvinas)</option>
-        <option id="countryCode" value="FRO">Faroe Islands</option>
-        <option id="countryCode" value="FJI">Fiji</option>
-        <option id="countryCode" value="FIN">Finland</option> -->
-        <!-- <option id="countryCode" value="FRA">France</option>
-        <option id="countryCode" value="GUF">French Guiana</option>
-        <option id="countryCode" value="PYF">French Polynesia</option>
-        <option id="countryCode" value="ATF">French Southern Territories</option>
-        <option id="countryCode" value="GAB">Gabon</option>
-        <option id="countryCode" value="GMB">Gambia</option>
-        <option id="countryCode" value="GEO">Georgia</option>
-        <option id="countryCode" value="DEU">Germany</option>
-        <option id="countryCode" value="GHA">Ghana</option>
-        <option id="countryCode" value="GIB">Gibraltar</option>
-        <option id="countryCode" value="GRC">Greece</option>
-        <option id="countryCode" value="GRL">Greenland</option>
-        <option id="countryCode" value="GRD">Grenada</option>
-        <option id="countryCode" value="GLP">Guadeloupe</option>
-        <option id="countryCode" value="GUM">Guam</option>
-        <option id="countryCode" value="GTM">Guatemala</option>
-        <option id="countryCode" value="GGY">Guernsey</option>
-        <option id="countryCode" value="GIN">Guinea</option>
-        <option id="countryCode" value="GNB">Guinea-Bissau</option>
-        <option id="countryCode" value="GUY">Guyana</option>
-        <option id="countryCode" value="HTI">Haiti</option>
-        <option id="countryCode" value="HMD">Heard Island and Mcdonald Islands</option>
-        <option id="countryCode" value="VAT">Holy See (Vatican City State)</option>
-        <option id="countryCode" value="HND">Honduras</option>
-        <option id="countryCode" value="HKG">Hong Kong</option>
-        <option id="countryCode" value="HUN">Hungary</option>
-        <option id="countryCode" value="ISL">Iceland</option>
-        <option id="countryCode" value="IND">India</option>
-        <option id="countryCode" value="IDN">Indonesia</option>
-        <option id="countryCode" value="IRN">Iran, Islamic Republic of</option>
-        <option id="countryCode" value="IRQ">Iraq</option>
-        <option id="countryCode" value="IRL">Ireland</option>
-        <option id="countryCode" value="IMN">Isle of Man</option>
-        <option id="countryCode" value="ISR">Israel</option>
-        <option id="countryCode" value="ITA">Italy</option>
-        <option id="countryCode" value="JAM">Jamaica</option> -->
-        <!-- <option id="countryCode" value="Japan/JPN">Japan</option> -->
-        <!-- <option id="countryCode" value="JEY">Jersey</option>
-        <option id="countryCode" value="JOR">Jordan</option>
-        <option id="countryCode" value="KAZ">Kazakhstan</option>
-        <option id="countryCode" value="KEN">Kenya</option>
-        <option id="countryCode" value="KIR">Kiribati</option>
-        <option id="countryCode" value="PRK">Korea, Democratic People's Republic of</option>
-        <option id="countryCode" value="KOR">Korea, Republic of</option>
-        <option id="countryCode" value="XKX">Kosovo</option>
-        <option id="countryCode" value="KWT">Kuwait</option>
-        <option id="countryCode" value="KGZ">Kyrgyzstan</option>
-        <option id="countryCode" value="LAO">Lao People's Democratic Republic</option>
-        <option id="countryCode" value="LVA">Latvia</option>
-        <option id="countryCode" value="LBN">Lebanon</option>
-        <option id="countryCode" value="LSO">Lesotho</option>
-        <option id="countryCode" value="LBR">Liberia</option>
-        <option id="countryCode" value="LBY">Libyan Arab Jamahiriya</option>
-        <option id="countryCode" value="LIE">Liechtenstein</option>
-        <option id="countryCode" value="LTU">Lithuania</option>
-        <option id="countryCode" value="LUX">Luxembourg</option>
-        <option id="countryCode" value="MAC">Macao</option>
-        <option id="countryCode" value="MKD">Macedonia, the Former Yugoslav Republic of</option>
-        <option id="countryCode" value="MDG">Madagascar</option>
-        <option id="countryCode" value="MWI">Malawi</option>
-        <option id="countryCode" value="MYS">Malaysia</option>
-        <option id="countryCode" value="MDV">Maldives</option>
-        <option id="countryCode" value="MLI">Mali</option>
-        <option id="countryCode" value="MLT">Malta</option>
-        <option id="countryCode" value="MHL">Marshall Islands</option>
-        <option id="countryCode" value="MTQ">Martinique</option>
-        <option id="countryCode" value="MRT">Mauritania</option>
-        <option id="countryCode" value="MUS">Mauritius</option>
-        <option id="countryCode" value="MYT">Mayotte</option>
-        <option id="countryCode" value="MEX">Mexico</option>
-        <option id="countryCode" value="FSM">Micronesia, Federated States of</option>
-        <option id="countryCode" value="MDA">Moldova, Republic of</option>
-        <option id="countryCode" value="MCO">Monaco</option>
-        <option id="countryCode" value="MNG">Mongolia</option>
-        <option id="countryCode" value="MNE">Montenegro</option>
-        <option id="countryCode" value="MSR">Montserrat</option>
-        <option id="countryCode" value="MAR">Morocco</option>
-        <option id="countryCode" value="MOZ">Mozambique</option>
-        <option id="countryCode" value="MMR">Myanmar</option>
-        <option id="countryCode" value="NAM">Namibia</option>
-        <option id="countryCode" value="NRU">Nauru</option> -->
-        <!-- <option id="countryCode" value="NPL">Nepal</option>
-        <option id="countryCode" value="NLD">Netherlands</option>
-        <option id="countryCode" value="ANT">Netherlands Antilles</option>
-        <option id="countryCode" value="NCL">New Caledonia</option>
-        <option id="countryCode" value="NZL">New Zealand</option>
-        <option id="countryCode" value="NIC">Nicaragua</option>
-        <option id="countryCode" value="NER">Niger</option>
-        <option id="countryCode" value="NGA">Nigeria</option>
-        <option id="countryCode" value="NIU">Niue</option>
-        <option id="countryCode" value="NFK">Norfolk Island</option>
-        <option id="countryCode" value="MNP">Northern Mariana Islands</option> -->
-        <!-- <option id="countryCode" value="NOR">Norway</option>
-        <option id="countryCode" value="OMN">Oman</option>
-        <option id="countryCode" value="PAK">Pakistan</option>
-        <option id="countryCode" value="PLW">Palau</option>
-        <option id="countryCode" value="PSE">Palestinian Territory, Occupied</option>
-        <option id="countryCode" value="PAN">Panama</option>
-        <option id="countryCode" value="PNG">Papua New Guinea</option>
-        <option id="countryCode" value="PRY">Paraguay</option>
-        <option id="countryCode" value="PER">Peru</option>
-        <option id="countryCode" value="PHL">Philippines</option>
-        <option id="countryCode" value="PCN">Pitcairn</option>
-        <option id="countryCode" value="POL">Poland</option>
-        <option id="countryCode" value="PRT">Portugal</option>
-        <option id="countryCode" value="PRI">Puerto Rico</option>
-        <option id="countryCode" value="QAT">Qatar</option>
-        <option id="countryCode" value="REU">Reunion</option>
-        <option id="countryCode" value="ROM">Romania</option>
-        <option id="countryCode" value="RUS">Russian Federation</option>
-        <option id="countryCode" value="RWA">Rwanda</option>
-        <option id="countryCode" value="BLM">Saint Barthelemy</option>
-        <option id="countryCode" value="SHN">Saint Helena</option>
-        <option id="countryCode" value="KNA">Saint Kitts and Nevis</option>
-        <option id="countryCode" value="LCA">Saint Lucia</option>
-        <option id="countryCode" value="MAF">Saint Martin</option>
-        <option id="countryCode" value="SPM">Saint Pierre and Miquelon</option>
-        <option id="countryCode" value="VCT">Saint Vincent and the Grenadines</option>
-        <option id="countryCode" value="WSM">Samoa</option>
-        <option id="countryCode" value="SMR">San Marino</option>
-        <option id="countryCode" value="STP">Sao Tome and Principe</option>
-        <option id="countryCode" value="SAU">Saudi Arabia</option>
-        <option id="countryCode" value="SEN">Senegal</option>
-        <option id="countryCode" value="SRB">Serbia</option>
-        <option id="countryCode" value="SCG">Serbia and Montenegro</option>
-        <option id="countryCode" value="SYC">Seychelles</option>
-        <option id="countryCode" value="SLE">Sierra Leone</option>
-        <option id="countryCode" value="SGP">Singapore</option>
-        <option id="countryCode" value="SXM">Sint Maarten</option>
-        <option id="countryCode" value="SVK">Slovakia</option>
-        <option id="countryCode" value="SVN">Slovenia</option>
-        <option id="countryCode" value="SLB">Solomon Islands</option>
-        <option id="countryCode" value="SOM">Somalia</option>
-        <option id="countryCode" value="ZAF">South Africa</option>
-        <option id="countryCode" value="SGS">South Georgia and the South Sandwich Islands</option>
-        <option id="countryCode" value="SSD">South Sudan</option>
-        <option id="countryCode" value="ESP">Spain</option>
-        <option id="countryCode" value="LKA">Sri Lanka</option>
-        <option id="countryCode" value="SDN">Sudan</option>
-        <option id="countryCode" value="SUR">Suriname</option>
-        <option id="countryCode" value="SJM">Svalbard and Jan Mayen</option>
-        <option id="countryCode" value="SWZ">Swaziland</option>
-        <option id="countryCode" value="SWE">Sweden</option>
-        <option id="countryCode" value="CHE">Switzerland</option>
-        <option id="countryCode" value="SYR">Syrian Arab Republic</option>
-        <option id="countryCode" value="TWN">Taiwan, Province of China</option>
-        <option id="countryCode" value="TJK">Tajikistan</option>
-        <option id="countryCode" value="TZA">Tanzania, United Republic of</option>
-        <option id="countryCode" value="THA">Thailand</option>
-        <option id="countryCode" value="TLS">Timor-Leste</option>
-        <option id="countryCode" value="TGO">Togo</option>
-        <option id="countryCode" value="TKL">Tokelau</option>
-        <option id="countryCode" value="TON">Tonga</option>
-        <option id="countryCode" value="TTO">Trinidad and Tobago</option>
-        <option id="countryCode" value="TUN">Tunisia</option>
-        <option id="countryCode" value="TUR">Turkey</option>
-        <option id="countryCode" value="TKM">Turkmenistan</option>
-        <option id="countryCode" value="TCA">Turks and Caicos Islands</option>
-        <option id="countryCode" value="TUV">Tuvalu</option>
-        <option id="countryCode" value="UGA">Uganda</option>
-        <option id="countryCode" value="UKR">Ukraine</option>
-        <option id="countryCode" value="ARE">United Arab Emirates</option>
-        <option id="countryCode" value="GBR">United Kingdom</option>
-        <option id="countryCode" value="USA">United States</option>
-        <option id="countryCode" value="UMI">United States Minor Outlying Islands</option>
-        <option id="countryCode" value="URY">Uruguay</option>
-        <option id="countryCode" value="UZB">Uzbekistan</option>
-        <option id="countryCode" value="VUT">Vanuatu</option>
-        <option id="countryCode" value="VEN">Venezuela</option>
-        <option id="countryCode" value="VNM">Viet Nam</option>
-        <option id="countryCode" value="VGB">Virgin Islands, British</option>
-        <option id="countryCode" value="VIR">Virgin Islands, U.s.</option>
-        <option id="countryCode" value="WLF">Wallis and Futuna</option>
-        <option id="countryCode" value="ESH">Western Sahara</option>
-        <option id="countryCode" value="YEM">Yemen</option>
-        <option id="countryCode" value="ZMB">Zambia</option>
-        <option id="countryCode" value="ZWE">Zimbabwe</option> -->
-    </select>
-    <button id="searchCountryButton">Search</button>
-  <!--Worls Stats-->
- <h2> <span id="countryName"> </span></h2>
-<h3>Death per million people: <span id="countryPerMillion"> </span></h3>
-<h3>Total Death: <span id="countryTotalDeath"> </span></h3>
-<h3>Total Cases: <span id="countryTotalCases"> </span></h3>
-<h3>Active Cases: <span id="countryActiveCases"> </span></h3>
-<h3>Total Recovered: <span id="countryTotalDeath"> 2561673</span></h3>
-</div>
-</div>
+        <option value="Brazil/bra">Brazil</option>
+        <option value="China/Chn">China</option>
+        <option value="Costa Rica/cri">Costa Rica</option>
+        <option value="France/fra">France</option>
+        <option value="Germany/deu">Germany</option>
+        <option value="India/ind">India</option>
+        <option value="Italy/ita">Italy</option>
+        <option value="Japan/jpn">Japan</option>
+        <option value="Kenya/ken">Kenya</option>
+        <option value="Mexico/mex">Mexico</option>
+        <option value="New Zealand/nzl">New Zealand</option>
+        <option value="Nigeria/nga">Nigeria</option>
+        <option value="Portugal/prt">Portugal</option>
+        <option value="Puerto Rico/pri">Puerto Rico</option>
+        <option value="Russia/rus">Russia</option>
+        <option value="Saudi Arabia/sau">Saudi Arabia</option>
+        <option value="South Africa/zaf">South Africa</option>
+        <option value="Spain/esp">Spain</option>
+        <option value="Sweden/swe">Sweden</option>
+      </select>
+      <button id="searchCountryButton">Search</button>
+      <!--Worls Stats-->
+      <h2> <span id="countryName"> </span></h2>
+      <h3>Death per million people: <span id="countryPerMillion"> </span></h3>
+      <h3>Total Death: <span id="countryTotalDeath"> </span></h3>
+      <h3>Total Cases: <span id="countryTotalCases"> </span></h3>
+      <h3>Active Cases: <span id="countryActiveCases"> </span></h3>
+      <h3>Total Recovered: <span id="countryTotalRecovered"> </span></h3>
+    </div>
+  </div>
 
- <!--State vs State-->
- <section id="stateState">
-  <div class="state1">
-      <select>
-        <option id="stateCode" value="AK">AK</option>
-        <option id="stateCode" value="AL">AL</option>
-        <option id="stateCode" value="AR">AR</option>	
-        <option id="stateCode" value="AZ">AZ</option>
-        <option id="stateCode" value="CA">CA</option>
-        <option id="stateCode" value="CO">CO</option>
-        <option id="stateCode" value="CT">CT</option>
-        <option id="stateCode" value="DC">DC</option>
-        <option id="stateCode" value="DE">DE</option>
-        <option id="stateCode" value="FL">FL</option>
-        <option id="stateCode" value="GA">GA</option>
-        <option id="stateCode" value="HI">HI</option>
-        <option id="stateCode" value="IA">IA</option>	
-        <option id="stateCode" value="ID">ID</option>
-        <option id="stateCode" value="IL">IL</option>
-        <option id="stateCode" value="IN">IN</option>
-        <option id="stateCode" value="KS">KS</option>
-        <option id="stateCode" value="KY">KY</option>
-        <option id="stateCode" value="LA">LA</option>
-        <option id="stateCode" value="MA">MA</option>
-        <option id="stateCode" value="MD">MD</option>
-        <option id="stateCode" value="ME">ME</option>
-        <option id="stateCode" value="MI">MI</option>
-        <option id="stateCode" value="MN">MN</option>
-        <option id="stateCode" value="MO">MO</option>	
-        <option id="stateCode" value="MS">MS</option>
-        <option id="stateCode" value="MT">MT</option>
-        <option id="stateCode" value="NC">NC</option>	
-        <option id="stateCode" value="NE">NE</option>
-        <option id="stateCode" value="NH">NH</option>
-        <option id="stateCode" value="NJ">NJ</option>
-        <option id="stateCode" value="NM">NM</option>			
-        <option id="stateCode" value="NV">NV</option>
-        <option id="stateCode" value="NY">NY</option>
-        <option id="stateCode" value="ND">ND</option>
-        <option id="stateCode" value="OH">OH</option>
-        <option id="stateCode" value="OK">OK</option>
-        <option id="stateCode" value="OR">OR</option>
-        <option id="stateCode" value="PA">PA</option>
-        <option id="stateCode" value="RI">RI</option>
-        <option id="stateCode" value="SC">SC</option>
-        <option id="stateCode" value="SD">SD</option>
-        <option id="stateCode" value="TN">TN</option>
-        <option id="stateCode" value="TX">TX</option>
-        <option id="stateCode" value="UT">UT</option>
-        <option id="stateCode" value="VT">VT</option>
-        <option id="stateCode" value="VA">VA</option>
-        <option id="stateCode" value="WA">WA</option>
-        <option id="stateCode" value="WI">WI</option>	
-        <option id="stateCode" value="WV">WV</option>
-        <option id="stateCode" value="WY">WY</option>
+  <!--State vs State-->
+  <section id="stateState">
+    <div class="state1">
+      <select id="stateCode">
+        <option>State Code</option>
+        <option value="AK">AK</option>
+        <option value="AL">AL</option>
+        <option value="AR">AR</option>
+        <option value="AZ">AZ</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DC">DC</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="IA">IA</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="MA">MA</option>
+        <option value="MD">MD</option>
+        <option value="ME">ME</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MO">MO</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="NC">NC</option>
+        <option value="NE">NE</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NV">NV</option>
+        <option value="NY">NY</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WI">WI</option>
+        <option value="WV">WV</option>
+        <option value="WY">WY</option>
       </select>
       <button id="searchButton">Search</button>
-   <!--COVID Stats starts here-->
+      <!--COVID Stats starts here-->
       <!-- <h2>State Name</h2> -->
       <h4>Total Cases: <span id="totalCases"> </span></h4>
       <h4>Deaths: <span id="totalDeaths"> </span></h4>
@@ -386,89 +156,91 @@
       <h4>ICU Bed's in Use: <span id="icuTotal"> </span></h4>
     </div>
 
-  <!--Dropdown state code and Search Button code starts here-->
-<!--State2-->
-<div class="state2">
-  <select>
-    <option id="stateCode2" value="AL">AL</option>
-    <option id="stateCode2" value="AK">AK</option>
-    <option id="stateCode2" value="AR">AR</option>	
-    <option id="stateCode2" value="AZ">AZ</option>
-    <option id="stateCode2" value="CA">CA</option>
-    <option id="stateCode2" value="CO">CO</option>
-    <option id="stateCode2" value="CT">CT</option>
-    <option id="stateCode2" value="DC">DC</option>
-    <option id="stateCode2" value="DE">DE</option>
-    <option id="stateCode2" value="FL">FL</option>
-    <option id="stateCode2" value="GA">GA</option>
-    <option id="stateCode2" value="HI">HI</option>
-    <option id="stateCode2" value="IA">IA</option>	
-    <option id="stateCode2" value="ID">ID</option>
-    <option id="stateCode2" value="IL">IL</option>
-    <option id="stateCode2" value="IN">IN</option>
-    <option id="stateCode2" value="KS">KS</option> 
-    <option id="stateCode2" value="KY">KY</option>
-    <option id="stateCode2" value="LA">LA</option>
-    <option id="stateCode2" value="MA">MA</option>
-    <option id="stateCode2" value="MD">MD</option>
-    <option id="stateCode2" value="ME">ME</option>
-    <option id="stateCode2" value="MI">MI</option>
-    <option id="stateCode2" value="MN">MN</option>
-    <option id="stateCode2" value="MO">MO</option>	
-    <option id="stateCode2" value="MS">MS</option>
-    <option id="stateCode2" value="MT">MT</option>
-    <option id="stateCode2" value="NC">NC</option>	
-    <option id="stateCode2" value="NE">NE</option>
-    <option id="stateCode2" value="NH">NH</option>
-    <option id="stateCode2" value="NJ">NJ</option>
-    <option id="stateCode2" value="NM">NM</option>			
-    <option id="stateCode2" value="NV">NV</option>
-    <option id="stateCode2" value="NY">NY</option>
-    <option id="stateCode2" value="ND">ND</option>
-    <option id="stateCode2" value="OH">OH</option>
-    <option id="stateCode2" value="OK">OK</option>
-    <option id="stateCode2" value="OR">OR</option>
-    <option id="stateCode2" value="PA">PA</option>
-    <option id="stateCode2" value="RI">RI</option>
-    <option id="stateCode2" value="SC">SC</option>
-    <option id="stateCode2" value="SD">SD</option>
-    <option id="stateCode2" value="TN">TN</option>
-    <option id="stateCode2" value="TX">TX</option>
-    <option id="stateCode2" value="UT">UT</option>
-    <option id="stateCode2" value="VT">VT</option>
-    <option id="stateCode2" value="VA">VA</option>
-    <option id="stateCode2" value="WA">WA</option>
-    <option id="stateCode2" value="WI">WI</option>	
-    <option id="stateCode2" value="WV">WV</option>
-    <option id="stateCode2" value="WY">WY</option>
-  </select>
-  <button id="searchButton2">Search</button>
-<!--COVID State stats-->
-  <!-- <h2>State Name</h2> -->
-  <h3>Total Cases: <span id="totalCases2"> </span></h3>
-  <h3>Deaths: <span id="totalDeaths2"> </span></h3>
-  <h3>Positive Tests: <span id="positiveTests2"> </span></h3>
-  <h3>ICU Bed Capacity: <span id="icuCapacity2"> </span></h3>
-  <h3>ICU Bed's in Use: <span id="icuTotal2"> </span></h3>
-</div>
- </section>
+    <!--Dropdown state code and Search Button code starts here-->
+    <!--State2-->
+    <div class="state2">
+      <select id="stateCode2">
+        <option>State Code</option>
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AR">AR</option>
+        <option value="AZ">AZ</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DC">DC</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="IA">IA</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="MA">MA</option>
+        <option value="MD">MD</option>
+        <option value="ME">ME</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MO">MO</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="NC">NC</option>
+        <option value="NE">NE</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NV">NV</option>
+        <option value="NY">NY</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WI">WI</option>
+        <option value="WV">WV</option>
+        <option value="WY">WY</option>
+      </select>
+      <button id="searchButton2">Search</button>
+      <!--COVID State stats-->
+      <!-- <h2>State Name</h2> -->
+      <h3>Total Cases: <span id="totalCases2"> </span></h3>
+      <h3>Deaths: <span id="totalDeaths2"> </span></h3>
+      <h3>Positive Tests: <span id="positiveTests2"> </span></h3>
+      <h3>ICU Bed Capacity: <span id="icuCapacity2"> </span></h3>
+      <h3>ICU Bed's in Use: <span id="icuTotal2"> </span></h3>
+    </div>
+  </section>
 
-<!--About us-->
- <div>
-<footer class="about-us">
-  <h3> The Team: </h3>
-  <ul>
-    <li> Austin Miller </li>
-    <li> Jonathan Martinez </li>
-    <li> Kris Lopez </li>
-    <li> Dylan Mastin </li>
-  </ul>
-</footer>
-</div>
+  <!--About us-->
+  <div>
+    <footer class="about-us">
+      <h3> The Team: </h3>
+      <ul>
+        <li> Austin Miller </li>
+        <li> Jonathan Martinez </li>
+        <li> Kris Lopez </li>
+        <li> Dylan Mastin </li>
+      </ul>
+    </footer>
+  </div>
 
-      <script src="./develop/script.js"></script>
-    </body>
-  <script src="./develop/compareCountry.js"></script>
   <script src="./develop/script.js"></script>
-  <script src="develop/worldStats.js"></script>
+</body>
+<script src="./develop/compareCountry.js"></script>
+<script src="./develop/script.js"></script>
+<script src="develop/worldStats.js"></script>
+
 </html>

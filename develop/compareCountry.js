@@ -1,7 +1,7 @@
 var inputUSA = document.querySelector("#usa")
 var searchCountryButton = document.querySelector("#searchCountryButton")
-function getUSAInfo(usa){
-    fetch ("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/northamerica", {
+function getUSAInfo(usa) {
+    fetch("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/USA/usa", {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com",
@@ -13,28 +13,28 @@ function getUSAInfo(usa){
         })
         .then(response => {
             console.log(response);
-            var deathPerMill = response[1].Deaths_1M_pop
-            var usaTotalDeath = response[1].TotalDeaths
-            var usaTotalCases = response[1].TotalCases
-            var usaActiveCases = response[1].ActiveCases
-            var usaTotalRecovered = response[1].TotalRecovered
+            var deathPerMill = response[0].Deaths_1M_pop
+            var usaTotalDeath = response[0].TotalDeaths
+            var usaTotalCases = response[0].TotalCases
+            var usaActiveCases = response[0].ActiveCases
+            var usaTotalRecovered = response[0].TotalRecovered
 
             document.querySelector("#usaPerMillion").textContent = deathPerMill
             document.querySelector("#usaTotalDeath").textContent = usaTotalDeath
             document.querySelector("#usaTotalCases").textContent = usaTotalCases
             document.querySelector("#usaActiveCases").textContent = usaActiveCases
             document.querySelector("#usaTotalRecovered").textContent = usaTotalRecovered
-	})
-    .catch(err => {
-        console.error(err);
-    });
+        })
+        .catch(err => {
+            console.error(err);
+        });
 }
 getUSAInfo()
 
 var inputCountry = document.querySelector("#countryCode")
 var searchCountryButton = document.querySelector("#searchCountryButton")
-function getCountryInfo(country){
-    fetch ("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/" + country, {
+function getCountryInfo(country) {
+    fetch("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/" + country, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com",
@@ -56,14 +56,14 @@ function getCountryInfo(country){
             document.querySelector("#countryTotalDeath").textContent = countryTotalDeath
             document.querySelector("#countryTotalCases").textContent = countryTotalCases
             document.querySelector("#countryActiveCases").textContent = countryActiveCases
-            document.querySelector("#countryTotalRecovered").textContent = countryTotalRecovered    
-	})
-    .catch(err => {
-        console.error(err);
-    });
+            document.querySelector("#countryTotalRecovered").textContent = countryTotalRecovered
+        })
+        .catch(err => {
+            console.error(err);
+        });
 }
 
-searchCountryButton.addEventListener("click", function(){
+searchCountryButton.addEventListener("click", function () {
     getCountryInfo(inputCountry.value)
-    })
+})
 
