@@ -5,7 +5,7 @@ This application will allow you to view the COVID status of your travel destinat
 
 # Built with:
  * HTML
- * CSS
+ * Tailwind CSS
  * Java Script
 
  # Contributors
@@ -15,4 +15,7 @@ This application will allow you to view the COVID status of your travel destinat
  * Kris Lopez
 
  # Webisite
+ 
+
+ # Screenshots
  
