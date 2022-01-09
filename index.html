@@ -5,53 +5,78 @@
   <meta charset="UTF-8" />
   <title>COVID Compare</title>
   <link rel="stylesheet" href="develop/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+
   <!--Nav Bar starts here-->
   <header>
-    <nav>
-      <h1> Covid Compare </h1>
+    <nav class="flex-row items-center bg-slate-700 p-3 flex-wrap">
+      <div class="container mx-auto">
+        <div class="sm:flex justify-around">
+      <header class="mr-16 text-white font-mono text-3xl font-bold uppercase"> Covid Compare </header>
       <!--nav list-->
-      <ul>
-        <li>
-          <a href=“.usaVworld”>USA V. World</a>
+      <ul class="sm:self-center border-t sm:border-none">
+        <li class="sm:inline-block">
+          <a href=“#” class="uppercase font-mono font-bold text-lg text-white p-5 hover:text-red-900">USA V. World</a>
         </li>
-        <li>
-          <a href=“.stateVstate”>State V. State</a>
+        <li class="sm:inline-block">
+          <a href=“#” class="uppercase font-mono font-bold text-lg text-white p-5 hover:text-red-900">State V. State </a>
         </li>
-        <li>
-          <a href=“.about-us”>About Us</a>
+        <li class="sm:inline-block">
+          <a href=“#” class="uppercase font-mono font-bold text-lg text-white p-5 hover:text-red-900">About Us </a>
         </li>
       </ul>
-    </nav>
+      </div>
+      </div>
+    </nav>code
   </header>
 
 
   <!--world covid stats-->
-  <div class="worldStats">
-    <h2>WORLD COVID STATS</h3>
-      <h3>Total Cases: <span id="worldTotalCases"> </span></h3>
-      <h3>Active Cases: <span id="worldActiveCases"> </span></h3>
-      <h3>Total Deaths: <span id="worldTotalDeaths"> </span></h3>
-      <h3>Total Recovered: <span id="worldRecovered"> </span></h3>
-  </div>
+  <div class="w-1/2 mx-auto grid grid-rows-2 gap-y-1 text-left">
+   <div class="border-4 border-white bg-slate-500">
+    <div class="p-5">
+      <div class="worldStats">
+        <!--header card-->
+        <header class="font-mono text-white text-xl font-extrabold py-1 px-1 text-center">
+          WORLD COVID STATS</header>
 
+        <header class="font-mono text-white font-bold py-1">Total Cases: <span id="worldTotalCases"> </span></header>
+        <header class="font-mono text-white font-bold py-1">Active Cases: <span id="worldActiveCases"> </span></header>
+        <header class="font-mono text-white font-bold py-1">Total Deaths: <span id="worldTotalDeaths"> </span></header>
+        <header class="font-mono text-white font-bold py-1">Total Recovered: <span id="worldRecovered"> </span></header>
+    </div>
+  </div>
+  </div>
+  </div>
+ 
   <!--Usa Vs the World Section-->
 
   <!--Usa Stats-->
+  <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
+  <div class="border-4 border-white bg-slate-500">
+  <div class="p-5">
   <div id="usaVworld">
     <div class="usa">
-      <h2>USA</h2>
-      <h3>Death per million people: <span id="usaPerMillion"> </span></h3>
-      <h3>Total Death: <span id="usaTotalDeath"> </span></h3>
-      <h3>Total Cases: <span id="usaTotalCases"> </span></h3>
-      <h3>Active Cases: <span id="usaActiveCases"> </span></h3>
-      <h3>Total Recovered: <span id="usaTotalRecovered"> </span></h3>
-    </div>
+      <header class="font-mono text-white text-xl font-extrabold py-1 px-1 text-center">USA</header>
+      <header class="font-mono text-white font-bold py-1">Death per million people: <span id="usaPerMillion"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Total Death: <span id="usaTotalDeath"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Total Cases: <span id="usaTotalCases"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Active Cases: <span id="usaActiveCases"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Total Recovered: <span id="usaTotalRecovered"> </span></header>
+  </div>
+  </div>
+  </div>
+  </div> 
+  </div> 
+  
 
     <!--Dropdown country code and Search Button code starts here-->
+    <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
+    <div class="border-4 border-white bg-slate-500">
+    <div class="p-5">
     <div id="world">
       <select class="country" name="country" id="countryCode">
         <option>select country</option>
@@ -80,15 +105,21 @@
       <button id="searchCountryButton">Search</button>
       <!--Worls Stats-->
       <h2> <span id="countryName"> </span></h2>
-      <h3>Death per million people: <span id="countryPerMillion"> </span></h3>
-      <h3>Total Death: <span id="countryTotalDeath"> </span></h3>
-      <h3>Total Cases: <span id="countryTotalCases"> </span></h3>
-      <h3>Active Cases: <span id="countryActiveCases"> </span></h3>
-      <h3>Total Recovered: <span id="countryTotalRecovered"> </span></h3>
-    </div>
+      <header class="font-mono text-white font-bold py-1">Death per million people: <span id="countryPerMillion"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Total Death: <span id="countryTotalDeath"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Total Cases: <span id="countryTotalCases"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Active Cases: <span id="countryActiveCases"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Total Recovered: <span id="countryTotalRecovered"> </span></header>
+      </div>
+  </div>
+  </div>
   </div>
 
+
   <!--State vs State-->
+  <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
+  <div class="border-4 border-white bg-slate-500">
+  <div class="p-5">
   <section id="stateState">
     <div class="state1">
       <select id="stateCode">
@@ -148,15 +179,20 @@
       <button id="searchButton">Search</button>
       <!--COVID Stats starts here-->
       <!-- <h2>State Name</h2> -->
-      <h4>Total Cases: <span id="totalCases"> </span></h4>
-      <h4>Deaths: <span id="totalDeaths"> </span></h4>
-      <h4>Positive Tests: <span id="positiveTests"> </span></h4>
-      <h4>ICU Bed Capacity: <span id="icuCapacity"> </span></h4>
-      <h4>ICU Bed's in Use: <span id="icuTotal"> </span></h4>
+      <header class="font-mono text-white font-bold py-1">Total Cases: <span id="totalCases"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Deaths: <span id="totalDeaths"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Positive Tests: <span id="positiveTests"> </span></header>
+      <header class="font-mono text-white font-bold py-1">ICU Bed Capacity: <span id="icuCapacity"> </span></header>
+      <header class="font-mono text-white font-bold py-1">ICU Bed's in Use: <span id="icuTotal"> </span></header>
     </div>
-
+    </div>
+    </div>
+    </div>
     <!--Dropdown state code and Search Button code starts here-->
     <!--State2-->
+    <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
+    <div class="border-4 border-white bg-slate-500">
+    <div class="p-5">
     <div class="state2">
       <select id="stateCode2">
         <option>State Code</option>
@@ -215,26 +251,31 @@
       <button id="searchButton2">Search</button>
       <!--COVID State stats-->
       <!-- <h2>State Name</h2> -->
-      <h3>Total Cases: <span id="totalCases2"> </span></h3>
-      <h3>Deaths: <span id="totalDeaths2"> </span></h3>
-      <h3>Positive Tests: <span id="positiveTests2"> </span></h3>
-      <h3>ICU Bed Capacity: <span id="icuCapacity2"> </span></h3>
-      <h3>ICU Bed's in Use: <span id="icuTotal2"> </span></h3>
+      <header class="font-mono text-white font-bold py-1">Total Cases: <span id="totalCases2"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Deaths: <span id="totalDeaths2"> </span></header>
+      <header class="font-mono text-white font-bold py-1">Positive Tests: <span id="positiveTests2"> </span></header>
+      <header class="font-mono text-white font-bold py-1">ICU Bed Capacity: <span id="icuCapacity2"> </span></header>
+      <header class="font-mono text-white font-bold py-1">ICU Bed's in Use: <span id="icuTotal2"> </span></header>
     </div>
+  </div>
+  </div>
+    
   </section>
 
   <!--About us-->
-  <div>
-    <footer class="about-us">
-      <h3> The Team: </h3>
-      <ul>
-        <li> Austin Miller </li>
-        <li> Jonathan Martinez </li>
-        <li> Kris Lopez </li>
-        <li> Dylan Mastin </li>
-      </ul>
-    </footer>
-  </div>
+    <div class="items-center bg-slate-700 w-full">
+    <div class="sm:flex justify-around">
+    <div class="text-center text-white font-mono text-2xl font-bold uppercase">
+    <div>
+         &copy All Rights Reserved To: 
+        Austin Miller Jonathan Martinez Kris Lopez Dylan Mastin 
+    </div>
+    </div>
+    </div>    
+    </div>
+
+  
+  
 
   <script src="./develop/script.js"></script>
 </body>
