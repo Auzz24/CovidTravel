@@ -35,7 +35,7 @@
 
 
   <!--world covid stats-->
-  <div class="w-1/2 mx-auto grid grid-rows-2 gap-y-1 text-left">
+  <div class="w-1/2 mx-auto grid grid-rows-1 gap-y-1 text-left">
    <div class="border-4 border-white bg-slate-500">
     <div class="p-5">
       <div class="worldStats">
@@ -55,8 +55,10 @@
   <!--Usa Vs the World Section-->
 
   <!--Usa Stats-->
-  <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
-  <div class="border-4 border-white bg-slate-500">
+<div class="flex flex-wrap justify-between">
+
+
+  <div class="flex flex-col border-4 border-white bg-slate-500 rounded-lg w-full m-6 overflow-hidden sm:w-52 ">
   <div class="p-5">
   <div id="usaVworld">
     <div class="usa">
@@ -66,18 +68,15 @@
       <header class="font-mono text-white font-bold py-1">Total Cases: <span id="usaTotalCases"> </span></header>
       <header class="font-mono text-white font-bold py-1">Active Cases: <span id="usaActiveCases"> </span></header>
       <header class="font-mono text-white font-bold py-1">Total Recovered: <span id="usaTotalRecovered"> </span></header>
+    </div>
   </div>
   </div>
   </div>
-  </div> 
-  </div> 
-  
+
 
     <!--Dropdown country code and Search Button code starts here-->
-    <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
-    <div class="border-4 border-white bg-slate-500">
+  <div class="flex flex-col border-4 border-white bg-slate-500 rounded-lg w-full m-6 overflow-hidden sm:w-52">
     <div class="p-5">
-    <div id="world">
       <select class="country" name="country" id="countryCode">
         <option>select country</option>
         <option value="Argentina/arg">Argentina</option>
@@ -105,22 +104,19 @@
       <button id="searchCountryButton"  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Search
       </button>
-      <!--Worls Stats-->
+      <!--Worlds Stats-->
       <h2> <span id="countryName"> </span></h2>
       <header class="font-mono text-white font-bold py-1">Death per million people: <span id="countryPerMillion"> </span></header>
       <header class="font-mono text-white font-bold py-1">Total Death: <span id="countryTotalDeath"> </span></header>
       <header class="font-mono text-white font-bold py-1">Total Cases: <span id="countryTotalCases"> </span></header>
       <header class="font-mono text-white font-bold py-1">Active Cases: <span id="countryActiveCases"> </span></header>
       <header class="font-mono text-white font-bold py-1">Total Recovered: <span id="countryTotalRecovered"> </span></header>
-      </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
 
 
   <!--State vs State-->
-  <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
-  <div class="border-4 border-white bg-slate-500">
+  <div class="flex flex-col border-4 border-white bg-slate-500 rounded-lg w-full m-6 overflow-hidden sm:w-52 ">
   <div class="p-5">
   <section id="stateState">
     <div class="state1">
@@ -189,13 +185,12 @@
       <header class="font-mono text-white font-bold py-1">ICU Bed Capacity: <span id="icuCapacity"> </span></header>
       <header class="font-mono text-white font-bold py-1">ICU Bed's in Use: <span id="icuTotal"> </span></header>
     </div>
-    </div>
-    </div>
-    </div>
+</div>
+</div>
+   
     <!--Dropdown state code and Search Button code starts here-->
     <!--State2-->
-    <div class="w-1/2 my-auto grid grid-rows-2 gap-y-1 text-left">
-    <div class="border-4 border-white bg-slate-500">
+    <div class="flex flex-col border-4 border-white bg-slate-500 rounded-lg w-full m-6 overflow-hidden sm:w-52 ">
     <div class="p-5">
     <div class="state2">
       <select id="stateCode2">
@@ -262,26 +257,25 @@
       <header class="font-mono text-white font-bold py-1">Positive Tests: <span id="positiveTests2"> </span></header>
       <header class="font-mono text-white font-bold py-1">ICU Bed Capacity: <span id="icuCapacity2"> </span></header>
       <header class="font-mono text-white font-bold py-1">ICU Bed's in Use: <span id="icuTotal2"> </span></header>
-    </div>
-  </div>
-  </div>
-    
-  </section>
+</div>
+</div>
+</div>
+</div>
+</section>
 
   <!--About us-->
-    <footer class ="bg-slate-700 py-8">
-      <div class="container flex flex-col md:flex-row items-center">
-        <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
-          <ul class="uppercase font-mono font-bold text-lg text-white">
-            <li> Austin Miller </li>
-            <li> Jonathan Martinez </li>
-            <li> Kris Lopez </li>
-            <li> Dylan Mastin </li>
+  <div class="flex-row items-center fixed inset-x-0 bottom-0">
+    <footer class ="bg-slate-700">
+      <header class="font-mono text-white font-medium text-center"> All Rights Reserved To The Team:
+          <ul class="text-center uppercase font-mono font-bold text-lg text-white sm:self-center border-t sm:border-none">
+            <li class="inline-block"> Austin Miller </li>
+            <li class="inline-block"> Jonathan Martinez </li>
+            <li class="inline-block"> Kris Lopez </li>
+            <li class="inline-block" > Dylan Mastin </li>
           </ul>
-      </div>
-    </div>
-    </div>
+      </header>
     </footer>
+  </div>
 
   
   
